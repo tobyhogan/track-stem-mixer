@@ -534,29 +534,25 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-body {
-  display: flex;
-  justify-content: center;
+.bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
 }
 
-button {
-  margin: 0 0 15px 30px;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
-#viewer-widget {
-  padding: 20px 30px 30px 30px;
-  margin: 50px 0 0 0;
+.font-bold {
+  font-weight: 700;
 }
 
-.track {
-  width: 400px;
-  height: 50px;
-  margin-bottom: 10px;
-  background-color: blue;
+.underline {
+  text-decoration-line: underline;
 }
