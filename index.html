@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Browser Music Viewer</title>
+
+    </head>
+    <body>
+        <div id="viewer-widget">
+            <h1>Music Viewer</h1>
+
+            <button onclick="playAllAudio()">Play All</button>
+            <button onclick="pauseAllAudio()">Pause All</button>
+            <button onclick="stopAllAudio()">Stop All</button>
+
+            <div class="track">
+                <audio controls>
+                    <source src="assets/pond-sweepme-lead.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="track">
+                <audio controls>
+                    <source src="assets/pond-sweepme-bass.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="track">
+                <audio controls>
+                    <source src="assets/pond-sweepme-strings.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="track">
+                <audio controls>
+                    <source src="assets/pond-sweepme-brass.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="track">
+                <audio controls>
+                    <source src="assets/pond-sweepme-glock.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="track">
+                <audio controls>
+                    <source src="assets/sweep-me-off-my-feet-drums-v3.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+
+        </div>
+        
+    </body>
     <script type="text/javascript" src="index.js"></script>
-    <title>Browser Music Viewer</title>
-
-</head>
-<body>
-    <div id="viewer-widget">
-        <h1>Music Viewer</h1>
-
-        <button>Play All</button>
-
-        <div class="track">
-            <audio controls>
-                <source src="assets/pond-sweepme-lead.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="track">
-            <audio controls>
-                <source src="assets/pond-sweepme-bass.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="track">
-            <audio controls>
-                <source src="assets/pond-sweepme-strings.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="track">
-            <audio controls>
-                <source src="assets/pond-sweepme-brass.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="track">
-            <audio controls>
-                <source src="assets/pond-sweepme-glock.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
-        </div>
-
-    </div>
-    
-</body>
 </html>

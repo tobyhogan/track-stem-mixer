@@ -1,13 +1,60 @@
 console.log("working00");
 
-const elements = document.getElementsByClassName('track');
+function playAllAudio() {
 
-console.log("elements length: " + toString(elements.length))
+    const elements = document.querySelectorAll(".track");
 
-for(let i = 0; i < 5; i++) {
-    console.log("hello world");
 
-    console.log(elements[i]);
+    for(let i = 0; i < elements.length; i++) {
+
+    
+        const audioElement = elements[i].querySelector("audio");
+
+        console.log(audioElement);
+
+        audioElement.play();
+    
+    
+    
+    }    
 }
 
-console.log(elements);
+function pauseAllAudio() {
+
+    const elements = document.querySelectorAll(".track");
+
+
+    for(let i = 0; i < elements.length; i++) {
+
+    
+        const audioElement = elements[i].querySelector("audio");
+
+        console.log(audioElement);
+
+        audioElement.pause();
+    
+    
+    
+    }    
+}
+
+function stopAllAudio() {
+
+    const elements = document.querySelectorAll(".track");
+
+
+    for(let i = 0; i < elements.length; i++) {
+
+    
+        const audioElement = elements[i].querySelector("audio");
+
+        console.log(audioElement);
+
+        audioElement.pause();
+        audioElement.currentTime = 0;
+    
+    
+    
+    }    
+}
+
