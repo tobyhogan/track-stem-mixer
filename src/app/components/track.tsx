@@ -1,37 +1,25 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 
-import * as InputKnobs from './input-knobs.js';
-
-
-// Stateless Functional Component
 
 const Track = ({source}) => {
 
+    const [val, setVal] = useState(84);
+
     function myFunc(event) {
 
+
+        console.log(event);
         console.log(event.target.value);
+        console.log("work");
+
+        setAmount(event.target.value);
     }
+    
 
   return (
 
-    /*
-    <div className="track flex">
-
-        <audio controls controlsList="nodownload noplaybackrate">
-        Your browser does not support the audio element.
-            <source src="./assets/pond-sweepme-lead.mp3" type="audio/mp3">
-            </source>
-        </audio>
-
-        <div className="flex audio-controls w-32 h-15 bg-white rounded-lg ml-2">
-            <input id="volume-knob" type="range" value="100" class="input-knob volume-knob" outline-none focus:outline-none outline-transparent border-transparent focus:ring-0 min="0" max="100" data-diameter="40" data-fgcolor="#404040" data-bgcolor="#9da4b0"/>
-        </div>
-
-    </div>
-
-    */
 
     <div className="track flex">
 
@@ -42,7 +30,7 @@ const Track = ({source}) => {
         </audio>
 
         <div className="flex audio-controls w-32 h-15 bg-white rounded-lg ml-2">
-            <input onChange={myFunc} id="volume-knob" type="range" min="0" max="100" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
+            <input type="range" id="volume-knob" min="0" max="100" value={val} onChange={myFunc} data-diameter='50' data-bgcolor="#a8a7b5" data-fgcolor="#4a4a4a" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
             
         </div>
 
@@ -52,6 +40,8 @@ const Track = ({source}) => {
 };
 
 export default Track;
+
+// <input onChange={myFunc} id="volume-knob" min="0" max="100" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
 
 
 
