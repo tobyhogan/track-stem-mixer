@@ -3,38 +3,56 @@
 import React, { useEffect, useState, useRef } from "react";
 
 
-const Track = ({source}) => {
+const Track = ({source, myFunction}) => {
+
+    console.log(source);
+
+
+
+
+    const MyAudio = React.forwardRef((props, ref) => {
+
+        return (
+
+                    
+        <audio controls controlsList="nodownload noplaybackrate" ref={ref} src={source} type="audio/mp3" className="">
+            Your browser does not support the audio element.
+            {props.children}
+        </audio>
+
+        );
+
+    });
+
+
+    const myaudio = useRef(null); //useRef(null);
+
+                //className="bg-green-300 w-10 h-10"
+
 
     const [val, setVal] = useState(84);
-
     const inputRef = useRef(null);
 
-    function myFunc(event) {
+    function updateVolume(event) {
 
-
-
-        console.log(event.target.value);
+        myaudio.current.volume = event.target.value / 100;
 
     }
 
     useEffect(() => {
-        inputRef.current.addEventListener("input", myFunc);
+        inputRef.current.addEventListener("input", updateVolume);
     }, []);
-    
 
+    
     return (
 
 
         <div className="track flex">
 
-            <audio controls controlsList="nodownload noplaybackrate">
-                Your browser does not support the audio element.
-                <source src={source} type="audio/mp3">
-                </source>
-            </audio>
+            <MyAudio ref={myaudio}/>
 
             <div className="flex audio-controls w-32 h-15 bg-white rounded-lg ml-2">
-                <input onChange={myFunc} ref={inputRef} type="range" id="volume-knob" min="0" max="100" value={val} data-diameter='50' data-bgcolor="#a8a7b5" data-fgcolor="#4a4a4a" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
+                <input onChange={updateVolume} ref={inputRef} type="range" id="volume-knob" min="0" max="100" value={val} data-diameter='50' data-bgcolor="#a8a7b5" data-fgcolor="#4a4a4a" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
                 
             </div>
 

@@ -1,85 +1,40 @@
 import Track from './components/track.tsx';
-
-import * as InputKnobs from './input-knobs.js';
+import {useRef} from 'react';
 
 
 export default function Home() {
 
   console.log("working00");
 
-  /*
 
 
 
 
-var musicDir = "/assets/music"
-var currentSong = "sweep-me-off-my-feet";
 
-function playAllAudio() {
+  var musicDir = "/assets/music"
+  var currentSong = "sweep-me-off-my-feet";
 
-    const elements = document.querySelectorAll(".track");
+  function playAllAudio(audioElement) {
 
+    console.log("hello world");
+      
+   
+  }
 
-    for(let i = 0; i < elements.length; i++) {
+  function pauseAllAudio() {
 
-    
-        const audioElement = elements[i].querySelector("audio");
+    console.log("hello world");
+      
+     
+  }
 
-        console.log(audioElement);
-
-        audioElement.play();
-    
-    
-    
-    }    
-}
-
-function pauseAllAudio() {
-
-    const elements = document.querySelectorAll(".track");
+  function stopAllAudio() {
+    console.log("hello world");
 
 
-    for(let i = 0; i < elements.length; i++) {
-
-    
-        const audioElement = elements[i].querySelector("audio");
-
-        console.log(audioElement);
-
-        audioElement.pause();
-    
-    
-    
-    }    
-}
-
-function stopAllAudio() {
-
-    const elements = document.querySelectorAll(".track");
+  }
 
 
-    for(let i = 0; i < elements.length; i++) {
-
-    
-        const audioElement = elements[i].querySelector("audio");
-
-        console.log(audioElement);
-
-        audioElement.pause();
-        audioElement.currentTime = 0;
-    
-    
-    
-    }    
-}
-
-var slider = document.getElementById("volume-knob");
-
-slider.addEventListener("input", (event) => {console.log(event.target.value); })
-
-console.log(slider.value)
-
-*/
 
 
   function myFunc() {
@@ -101,9 +56,9 @@ console.log(slider.value)
 
         <h1 className="text-3xl text-center text-white my-5 underline">Music Viewer</h1>
 
-        <button onClick={myFunc()}>Play All</button>
-        <button onClick={myFunc()}>Pause All</button>
-        <button onClick={myFunc()}>Stop All</button>
+        <button onClick={playAllAudio()}>Play All</button>
+        <button onClick={pauseAllAudio()}>Pause All</button>
+        <button onClick={stopAllAudio()}>Stop All</button>
 
         <Track source={musicFolder + currentSongFolder + "pond-sweepme-lead.mp3"}></Track>
         <Track source={musicFolder + currentSongFolder + "pond-sweepme-strings.mp3"}></Track>
