@@ -1,9 +1,0 @@
-{
-  "devDependencies": {
-    "tailwindcss": "^3.3.3"
-  },
-  "dependencies": {
-    "glob": "^10.3.4",
-    "jquery": "^3.7.1"
-  }
-}
