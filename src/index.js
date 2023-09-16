@@ -58,10 +58,8 @@ function stopAllAudio() {
     }    
 }
 
-var slider = document.getElementsByClassName("volume-knob");
+var slider = document.getElementById("volume-knob");
 
-function myScript() {
-    console.log('hello world');
-}
+slider.addEventListener("input", (event) => {console.log(event.target.value); })
 
-slider.addEventListener("input", myScript);
+console.log(slider.value)
