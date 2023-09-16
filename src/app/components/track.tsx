@@ -30,7 +30,7 @@ const Track = ({source}) => {
         </audio>
 
         <div className="flex audio-controls w-32 h-15 bg-white rounded-lg ml-2">
-            <input type="range" id="volume-knob" min="0" max="100" value={val} onChange={myFunc} data-diameter='50' data-bgcolor="#a8a7b5" data-fgcolor="#4a4a4a" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
+            <input onChange={myFunc} type="range" id="volume-knob" min="0" max="100" value={val} data-diameter='50' data-bgcolor="#a8a7b5" data-fgcolor="#4a4a4a" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
             
         </div>
 
