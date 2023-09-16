@@ -1,4 +1,15 @@
+import { Glob } from '../node_modules/glob/dist/cjs/src/glob.js'
+
+
 console.log("working00");
+
+
+
+
+var musicDir = "/assets/music"
+var currentSong = "sweep-me-off-my-feet";
+
+const files = glob.sync(musicDir + currentSong + "/**/*");
 
 function playAllAudio() {
 
