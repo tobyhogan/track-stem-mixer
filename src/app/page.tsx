@@ -1,5 +1,7 @@
 import Track from './components/track.tsx';
 
+import * as InputKnobs from './input-knobs.js';
+
 
 export default function Home() {
 

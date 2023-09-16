@@ -1,8 +1,19 @@
+'use client';
+
 import React from "react";
+
+import * as InputKnobs from './input-knobs.js';
+
 
 // Stateless Functional Component
 
 const Track = ({source}) => {
+
+    function myFunc(event) {
+
+        console.log(event.target.value);
+    }
+
   return (
 
     /*
@@ -31,7 +42,7 @@ const Track = ({source}) => {
         </audio>
 
         <div className="flex audio-controls w-32 h-15 bg-white rounded-lg ml-2">
-            <input id="volume-knob" type="range" value="100" min="0" max="100" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
+            <input onChange={myFunc} id="volume-knob" type="range" min="0" max="100" className="input-knob volume-knob outline-none focus:outline-none outline-transparent border-transparent focus:ring-0"/>
             
         </div>
 
