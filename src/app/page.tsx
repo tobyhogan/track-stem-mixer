@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Track from './components/track.tsx';
 
+import music from '../assets/music';
+
 export default function Home() {
 
   function myFunc() {
@@ -19,12 +21,9 @@ export default function Home() {
         <button onClick={myFunc()}>Pause All</button>
         <button onClick={myFunc()}>Stop All</button>
 
-        <Track></Track>
-        <Track></Track>
-        <Track></Track>
-        <Track></Track>
-        <Track></Track>
-        <Track></Track>
+        <Track source={"../public/assets/music/sweep-me-off-my-feet/pond-sweepme-bass.mp3"}></Track>
+
+   
 
 
 

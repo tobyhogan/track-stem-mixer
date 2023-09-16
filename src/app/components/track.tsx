@@ -2,7 +2,7 @@ import React from "react";
 
 // Stateless Functional Component
 
-const Track = () => {
+const Track = ({source}) => {
   return (
 
     /*
@@ -26,7 +26,7 @@ const Track = () => {
 
         <audio controls controlsList="nodownload noplaybackrate">
             Your browser does not support the audio element.
-            <source src="./assets/pond-sweepme-lead.mp3" type="audio/mp3">
+            <source src={source} type="audio/mp3">
             </source>
         </audio>
 

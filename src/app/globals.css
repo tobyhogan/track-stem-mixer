@@ -11,3 +11,28 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+button {
+  margin: 0 0px 10px 10px;
+  padding: 0 5px;
+
+  color: white;
+  border: 1px solid white;
+  background-color: darkslategray;
+  border-radius: 5px;
+}
+
+::-webkit-media-controls-enclosure {
+  border-radius: 10px;
+}
+
+::-webkit-media-controls-volume-control-container{
+  display: none;
+}
+
+
+
+
+.track {
+  margin: 5px 0 0 0;
+}
