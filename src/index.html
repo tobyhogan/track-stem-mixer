@@ -6,32 +6,22 @@
         <title>Browser Music Viewer</title>
 
     </head>
+    
 
+    <script src="assets/js/input-knobs.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script>
 
         root = document.location.hostname
 
         $(function(){
-            $('#track-template').load('components/track-template.html');
+            $('.track-template').load('components/track-template.html');
         });
 
 
     </script>
 
     <body class="flex justify-center">
-
-
-        <template>
-            <div class="track">
-                <audio controls controlsList="nodownload noplaybackrate">
-                    <source src="assets/pond-sweepme-lead.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-                </audio>
-            </div>
-        </template>
-
-        <div id="track-template"></div>        
 
         <div id="viewer-widget" class="flex-row h-min bg-gray-500 m-0 mt-6 pb-6 px-10 rounded-lg">
             <h1 class="text-3xl text-center text-white my-5 underline">Music Viewer</h1>
@@ -40,46 +30,16 @@
             <button class onclick="pauseAllAudio()">Pause All</button>
             <button onclick="stopAllAudio()">Stop All</button>
 
-            <div class="track flex">
-                <audio controls controlsList="nodownload noplaybackrate">
-                    <source src="assets/pond-sweepme-lead.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-                </audio>
-                <div class="flex audio-controls w-32 h-15 bg-white rounded-lg ml-2">
-                    <input id="volume-knob" type="range" value="0" class="input-knob volume-knob" outline-none focus:outline-none outline-transparent border-transparent focus:ring-0 min="0" max="100" data-diameter="40" data-fgcolor="#404040" data-bgcolor="#9da4b0"/>
-                </div>
+            
+            <div class="track-template" data-src="./assets/pond-sweepme-lead.mp3" data-type="audio/mp3">
             </div>
-            <div class="track">
-                <audio controls>
-                    <source src="assets/pond-sweepme-bass.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-                </audio>
+            <div class="track-template" data-src="./assets/pond-sweepme-bass.mp3" data-type="audio/mp3">
             </div>
-            <div class="track">
-                <audio controls>
-                    <source src="assets/pond-sweepme-strings.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-                </audio>
+            <div class="track-template" data-src="./assets/pond-sweepme-brass.mp3" data-type="audio/mp3">
             </div>
-            <div class="track">
-                <audio controls>
-                    <source src="assets/pond-sweepme-brass.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="track">
-                <audio controls>
-                    <source src="assets/pond-sweepme-glock.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="track">
-                <audio controls>
-                    <source src="" type="audio/mp3">
-                Your browser does not support the audio element.
-                </audio>
-            </div>
+        
 
+            
         </div>
         
     </body>
