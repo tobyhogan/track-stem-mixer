@@ -31,6 +31,8 @@ const Track = ({source, audioLink}) => {
     const [val, setVal] = useState(84);
     const inputRef = useRef(null);
 
+    //const [trackTimeProgress, updateTrackTimeProgress] = useState(0);
+
     function updateVolume(event) {
 
         myaudio.current.volume = event.target.value / 100;
@@ -57,6 +59,11 @@ const Track = ({source, audioLink}) => {
         console.log("current vol: " + myaudio.current.volume)
 
         console.log("play status: " + !myaudio.current.paused)
+        console.log("current time through track: " + myaudio.current.currentTime)
+
+        //updateTrackTimeProgress(myaudio.current.currentTime)
+
+        console.log("1234current time through track: " + "ok")
 
         if (true) {
 
