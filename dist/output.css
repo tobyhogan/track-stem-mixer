@@ -534,119 +534,16 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .m-0 {
   margin: 0px;
-}
-
-.mt-32 {
-  margin-top: 8rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .mt-6 {
   margin-top: 1.5rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mt-9 {
-  margin-top: 2.25rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .flex {
   display: flex;
-}
-
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-36 {
-  height: 9rem;
-}
-
-.h-max {
-  height: -moz-max-content;
-  height: max-content;
-}
-
-.h-min {
-  height: -moz-min-content;
-  height: min-content;
-}
-
-.h-auto {
-  height: auto;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-11 {
-  height: 2.75rem;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-0 {
-  height: 0px;
-}
-
-.max-h-0 {
-  max-height: 0px;
-}
-
-.w-0 {
-  width: 0px;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.flex-none {
-  flex: none;
-}
-
-.flex-auto {
-  flex: 1 1 auto;
-}
-
-.flex-initial {
-  flex: 0 1 auto;
-}
-
-.flex-shrink {
-  flex-shrink: 1;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-col {
-  flex-direction: column;
 }
 
 .justify-center {
@@ -678,8 +575,15 @@ video {
 }
 
 .track {
-  width: 400px;
-  height: 50px;
-  margin-bottom: 10px;
+  margin: 5px 0 0 0;
 }
 
+button {
+  justify-self: center;
+  align-self: center;
+
+  border: 1px solid white;
+  color: white;
+  background-color: darkslategrey;
+
+}
