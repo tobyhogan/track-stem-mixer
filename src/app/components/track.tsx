@@ -3,9 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 
 
-const Track = ({source, myFunction}) => {
-
-    console.log(source);
+const Track = ({source, audioLink}) => {
 
 
 
@@ -42,6 +40,35 @@ const Track = ({source, myFunction}) => {
     useEffect(() => {
         inputRef.current.addEventListener("input", updateVolume);
     }, []);
+
+
+
+    if (audioLink == false) {
+
+        console.log("current vol12341: " + myaudio.current.volume)
+
+        myaudio.current.pause();
+
+        console.log("12341worked?");
+
+
+    } else if (audioLink == true) {
+
+        console.log("current vol: " + myaudio.current.volume)
+
+        console.log("play status: " + !myaudio.current.paused)
+
+        if (true) {
+
+            myaudio.current.play();
+
+
+        }
+
+
+        console.log("worked?");
+    }
+    
 
     
     return (
