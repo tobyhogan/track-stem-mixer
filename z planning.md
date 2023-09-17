@@ -14,3 +14,7 @@ Potential feature ideas:
 - reverb slider
 - crunch slider
 - speed slider
+
+
+
+explaining:

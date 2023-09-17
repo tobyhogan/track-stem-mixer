@@ -3,7 +3,17 @@
 import React, { useEffect, useState, useRef } from "react";
 
 
-const Track = ({source, audioLink}) => {
+const Track = ({source, isPlaying}) => {
+
+    const [trackTimeProgress, updateTrackTimeProgress] = useState(0);
+
+    const myaudio = useRef(null); //useRef(null);
+
+    //className="bg-green-300 w-10 h-10"
+
+
+    const [val, setVal] = useState(84);
+    const inputRef = useRef(null);
 
 
 
@@ -23,15 +33,7 @@ const Track = ({source, audioLink}) => {
     });
 
 
-    const myaudio = useRef(null); //useRef(null);
 
-                //className="bg-green-300 w-10 h-10"
-
-
-    const [val, setVal] = useState(84);
-    const inputRef = useRef(null);
-
-    //const [trackTimeProgress, updateTrackTimeProgress] = useState(0);
 
     function updateVolume(event) {
 
@@ -45,36 +47,32 @@ const Track = ({source, audioLink}) => {
 
 
 
-    if (audioLink == false) {
+    if (isPlaying == false) {
 
-        console.log("current vol12341: " + myaudio.current.volume)
+
+
+
+
+
+        console.log("current time through track: " + myaudio.current.currentTime)
+
+        updateTrackTimeProgress(myaudio.current.currentTime)
 
         myaudio.current.pause();
 
-        console.log("12341worked?");
 
 
-    } else if (audioLink == true) {
+    } else if (isPlaying == true) {
 
-        console.log("current vol: " + myaudio.current.volume)
 
-        console.log("play status: " + !myaudio.current.paused)
-        console.log("current time through track: " + myaudio.current.currentTime)
 
         //updateTrackTimeProgress(myaudio.current.currentTime)
 
-        console.log("1234current time through track: " + "ok")
 
-        if (true) {
+        myaudio.current.play();
 
-            myaudio.current.play();
-
-
-        }
-
-
-        console.log("worked?");
     }
+
     
 
     

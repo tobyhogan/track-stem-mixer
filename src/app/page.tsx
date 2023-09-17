@@ -47,26 +47,27 @@ export default function Home() {
 
   }
 
-  const [playingStatus, updatePlaying] = useState(false);
+  const [playingStatus, updatePlaying] = useState(null);
 
-  const [playSignal, updatePlaySignal] = useState(null);
+  //const [playSignal, updatePlaySignal] = useState(null);
 
 
   const musicFolder = "./assets/music"
   const currentSongFolder = "/sweep-me-off-my-feet/"
 
   return (
-    <div id="viewer-widget" className="flex-row h-min bg-gray-500 m-0 mt-6 pb-6 px-10 rounded-lg">
+    <div id="viewer-widget" className="flex-row h-min w-min bg-gray-500 m-0 mt-20 ml-5 pt-1 pb-6 px-10 rounded-lg">
 
       <h1 className="text-3xl text-center text-white my-5 underline">Music Viewer</h1>
 
-      <button onClick={() => updatePlaySignal(true)}>Play All</button>
+      <button onClick={() => updatePlaying(true)}>Play All</button>
 
-      <button onClick={() => updatePlaySignal(false)}>Stop All</button>
+      <button onClick={() => updatePlaying(false)}>Stop All</button>
 
-      <Track source={musicFolder + currentSongFolder + "pond-sweepme-lead.mp3"} audioLink={playSignal} />
-      <Track source={musicFolder + currentSongFolder + "pond-sweepme-lead.mp3"} audioLink={playSignal} />
-      <Track source={musicFolder + currentSongFolder + "pond-sweepme-lead.mp3"} audioLink={playSignal} />
+      <Track source={musicFolder + currentSongFolder + "pond-sweepme-lead.mp3"} isPlaying={playingStatus} />
+      <Track source={musicFolder + currentSongFolder + "pond-sweepme-strings.mp3"} isPlaying={playingStatus} />
+      <Track source={musicFolder + currentSongFolder + "pond-sweepme-bass.mp3"} isPlaying={playingStatus} />
+      <Track source={musicFolder + currentSongFolder + "pond-sweepme-brass.mp3"} isPlaying={playingStatus} />
 
   
     </div>
