@@ -57,6 +57,9 @@ export default function Home() {
 
   return (
     <div id="viewer-widget" className="flex-row h-min w-min bg-gray-500 m-0 mt-20 ml-5 pt-1 pb-6 px-10 rounded-lg">
+      <div id="track-container">
+
+      </div>
 
       <h1 className="text-3xl text-center text-white my-5 underline">Music Viewer</h1>
 

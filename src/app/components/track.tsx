@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from "react";
+import ReactDOM from 'react-dom';
+
 
 
 const Track = ({source, isPlaying}) => {
@@ -31,6 +33,17 @@ const Track = ({source, isPlaying}) => {
         );
 
     });
+
+    const [audio1, setAudio1] = useState(null)
+    
+    useEffect(() => {
+
+      setAudio1(new Audio(source));
+    // only run once on the first render on the client
+    }, [])
+
+
+    ReactDOM.render(audio1, document.getElementById("track-container"));
 
 
 
