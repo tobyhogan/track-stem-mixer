@@ -1,7 +1,6 @@
+'use client';
 
-
-
-const AudioTrack = (src) => {
+const AudioTrack = ({src}) => {
     return (
       <div>
         <audio controls src={src}>
