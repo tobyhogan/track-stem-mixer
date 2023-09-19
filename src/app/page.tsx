@@ -2,50 +2,12 @@
 
 import Track from './components/track.tsx';
 
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 
 
 export default function Home() {
 
 
-
-
-
-
-  var musicDir = "/assets/music"
-  var currentSong = "sweep-me-off-my-feet";
-
-  /* function playAllAudio() {
-
-    console.log("hello world");
-      
-   
-  }
-  */
-
-  function pauseAllAudio() {
-
-    console.log("hello world");
-      
-     
-  }
-
-  function stopAllAudio() {
-    console.log("hello world");
-
-
-  }
-
-
-
-
-  function myFunc() {
-
-    console.log("hello world");
-
-
-
-  }
 
   const [playingStatus, updatePlaying] = useState(null);
 
@@ -67,10 +29,10 @@ export default function Home() {
 
       <button onClick={() => updatePlaying(false)}>Stop All</button>
 
-      <Track source={musicFolder + currentSongFolder + "pond-sweepme-lead.mp3"} isPlaying={playingStatus} />
-      <Track source={musicFolder + currentSongFolder + "pond-sweepme-strings.mp3"} isPlaying={playingStatus} />
-      <Track source={musicFolder + currentSongFolder + "pond-sweepme-bass.mp3"} isPlaying={playingStatus} />
-      <Track source={musicFolder + currentSongFolder + "pond-sweepme-brass.mp3"} isPlaying={playingStatus} />
+      <Track src={musicFolder + currentSongFolder + "pond-sweepme-lead.mp3"} isPlaying={playingStatus} />
+      <Track src={musicFolder + currentSongFolder + "pond-sweepme-strings.mp3"} isPlaying={playingStatus} />
+      <Track src={musicFolder + currentSongFolder + "pond-sweepme-bass.mp3"} isPlaying={playingStatus} />
+      <Track src={musicFolder + currentSongFolder + "pond-sweepme-brass.mp3"} isPlaying={playingStatus} />
 
   
     </div>
