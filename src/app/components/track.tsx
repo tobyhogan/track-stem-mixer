@@ -1,39 +1,14 @@
-'use client';
-
-import React, { useEffect, useState, useRef, useMemo } from "react";
-import ReactDOM from 'react-dom';
 
 
 
-const Track = ({ src, isPlaying }) => {
-  
-    // Hooks //
-    
-    const audio = useMemo(() => {
-
-        return new Audio(src)
-
-    }, [src])
-    
-    useEffect(() => {
-      if (isPlaying) {
-        audio.play()
-      } else {
-        audio.pause()
-      }
-      return () => audio.pause()
-    }, [isPlaying])
-    
-    // Rendering //
-    
+const AudioTrack = (src) => {
     return (
-      <li>
-        {src}
-      </li>
-    )
+      <div>
+        <audio controls src={src}>
+
+        </audio>
+      </div>
+    );
 }
 
-export default Track;
-
-
-
+export default AudioTrack;

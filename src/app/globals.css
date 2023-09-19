@@ -3,4 +3,7 @@
 @tailwind utilities;
 
 
-
+button {
+  border: 1px solid;
+  padding: 0 5px 0 5px;
+}
