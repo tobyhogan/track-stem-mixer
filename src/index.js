@@ -1,3 +1,5 @@
+
+
 console.log("working00");
 
 function playAllAudio() {
@@ -58,8 +60,12 @@ function stopAllAudio() {
     }    
 }
 
+/*
 var slider = document.getElementById("volume-knob");
 
 slider.addEventListener("input", (event) => {console.log(event.target.value); })
 
 console.log(slider.value)
+
+
+*/
