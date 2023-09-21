@@ -1,80 +1,4 @@
 
-function playAllAudio() {
-
-    const elements = document.querySelectorAll(".track");
-
-    console.log("working1");
-
-
-    for(let i = 0; i < elements.length; i++) {
-
-
-        console.log("working222");
-
-    
-        const audioElement = elements[i].querySelector("audio");
-
-        console.log(audioElement);
-
-        audioElement.play();
-
-        console.log("working3333");
-    
-    
-    
-    }    
-}
-
-function pauseAllAudio() {
-
-    const elements = document.querySelectorAll(".track");
-
-
-    for(let i = 0; i < elements.length; i++) {
-
-    
-        const audioElement = elements[i].querySelector("audio");
-
-        console.log(audioElement);
-
-        audioElement.pause();
-    
-    
-    
-    }    
-}
-
-function stopAllAudio() {
-
-    const elements = document.querySelectorAll(".track");
-
-
-    for(let i = 0; i < elements.length; i++) {
-
-    
-        const audioElement = elements[i].querySelector("audio");
-
-        console.log(audioElement);
-
-        audioElement.pause();
-        audioElement.currentTime = 0;
-    
-    
-    
-    }    
-}
-
-/*
-var slider = document.getElementById("volume-knob");
-
-slider.addEventListener("input", (event) => {console.log(event.target.value); })
-
-console.log(slider.value)
-
-
-*/
-
-
 function changeFunc() {
 
     //assuming sweep me off my feet
@@ -92,6 +16,23 @@ function changeFunc() {
     audio1.classList.add("track");
 
 
+    /*
+
+    var volumeEditor = "
+
+
+        <div class=\"flex audio-controls w-32 h-15 bg-white rounded-lg ml-2\">
+            <input id=\"volume-knob\" type=\"range\" value=\"100\" class=\"input-knob volume-knob\" outline-none focus:outline-none outline-transparent border-transparent focus:ring-0 min=\"0\" max=\"100\" data-diameter=\"40\" data-fgcolor=\"#404040\" data-bgcolor=\"#9da4b0\"/>
+        </div>
+        
+        "
+
+    */
+
+
+
+
+
     var audio2 = document.createElement("AUDIO");
     audio2.setAttribute("src", "assets/pond-sweepme-brass.mp3");
     audio2.setAttribute("controls", "controls");
@@ -105,10 +46,12 @@ function changeFunc() {
     var audio4 = document.createElement("AUDIO");
     audio4.setAttribute("src", "assets/pond-sweepme-lead.mp3");
     audio4.setAttribute("controls", "controls");
+    audio4.classList.add("track");
 
     var audio5 = document.createElement("AUDIO");
     audio5.setAttribute("src", "assets/pond-sweepme-strings.mp3");
     audio5.setAttribute("controls", "controls");
+    audio5.classList.add("track");
 
 
     tag.appendChild(audio1);
@@ -125,3 +68,64 @@ function changeFunc() {
 
 
 }
+
+function playAllAudio() {
+
+    const elements = document.querySelectorAll(".track");
+
+
+
+    for(let i = 0; i < elements.length; i++) {
+
+
+
+
+        elements[i].play();
+
+    
+    
+    
+    }    
+}
+
+function pauseAllAudio() {
+
+    const elements = document.querySelectorAll(".track");
+
+
+    for(let i = 0; i < elements.length; i++) {
+
+
+        elements[i].pause();
+
+    
+    
+    }    
+}
+
+function stopAllAudio() {
+
+    const elements = document.querySelectorAll(".track");
+
+
+    for(let i = 0; i < elements.length; i++) {
+
+    
+        elements[i].pause();
+        elements[i].currentTime = 0;
+    
+    
+    
+    }    
+}
+
+/*
+var slider = document.getElementById("volume-knob");
+
+slider.addEventListener("input", (event) => {console.log(event.target.value); })
+
+console.log(slider.value)
+
+
+*/
+
