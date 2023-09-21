@@ -21,11 +21,17 @@
             $('.track-template').load('components/track-template.html');
         });
 
+
+        below, 
+
+            <script src="/assets/js/track.js" type="text/javascript" defer>
+
         */
 
 
     </script>
-    <script src="components/track.js" type="text/javascript" defer></script>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script>
     // compile the template
@@ -45,14 +51,13 @@
             <div class="dropdown"></div>
 
 
-            <form action="/src/assets/js/dropdown-action.js">
-                <label for="song">Choose a car:</label>
-                <select name="song" id="song">
+            <form action="">
+                <label for="song">Song:</label>
+                <select name="song" id="song-select" onchange="changeFunc();">
                   <option value="none">None</option>
                   <option value="sweep-me-off-my-feet">Sweep Me Off My Feet</option>
                 </select>
                 <br><br>
-                <input class="submit" type="submit" value="Submit">
               </form>
             </div>
 
