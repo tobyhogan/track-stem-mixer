@@ -1,0 +1,52 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../dist/output.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Browser Music Viewer</title>
+
+    </head>
+    
+
+    <script src="assets/js/input-knobs.js"></script>
+    
+    <script>
+    // compile the template
+    var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+    // execute the compiled template and print the output to the console
+    console.log(template({ doesWhat: "rocks!" }));
+    </script>
+
+    <body class="flex justify-center">
+
+        <div id="viewer-widget" class="flex-row h-min bg-gray-500 m-0 mt-6 pb-6 px-10 rounded-lg">
+            <h1 class="text-3xl text-center text-white my-5 underline">Music Viewer</h1>
+
+            <button onclick="playAllAudio()">Play All</button>
+            <button class onclick="pauseAllAudio()">Pause All</button>
+            <button onclick="stopAllAudio()">Stop All</button>
+            <div class="dropdown"></div>
+
+
+            <form action="">
+                <label for="song">Song:</label>
+                <select name="song" id="song-select" onchange="changeFunc();">
+                  <option value="none">None</option>
+                  <option value="sweep-me-off-my-feet">Sweep Me Off My Feet</option>
+                </select>
+                <br><br>
+              </form>
+            </div>
+
+            <track-component></track-component>
+        
+
+            <div></div>
+
+            
+        </div>
+        
+    </body>
+    <script type="text/javascript" src="index.js"></script>
+</html>
