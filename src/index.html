@@ -3,20 +3,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../dist/output.css" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
         <title>Browser Music Viewer</title>
 
-    </head>
-    
 
-    <script src="assets/js/input-knobs.js"></script>
-    
-    <script>
-    // compile the template
-    var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
-    // execute the compiled template and print the output to the console
-    console.log(template({ doesWhat: "rocks!" }));
-    </script>
+        <script src="js/input-knobs.js"></script>
+
+        <script src="components/Track.js" type="text/javascript" defer></script>
+
+    </head>
+
 
     <body class="flex justify-center">
 
