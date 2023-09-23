@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-button, .submit {
-    margin: 0 0px 10px 10px;
+button {
     padding: 0 5px;
+    margin: 0 5px 0 0;
 
     color: white;
     border: 1px solid white;
     background-color: darkslategray;
     border-radius: 5px;
+    width: 80px;
+
+
+
 }
 
 ::-webkit-media-controls-enclosure {

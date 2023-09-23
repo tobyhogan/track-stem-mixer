@@ -34,7 +34,8 @@ function updateSong() {
     var selectBox = document.getElementById("song-select");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
 
-    tag = document.getElementById("viewer-widget");
+    tag = document.getElementById("tracks-container");
+    tag.innerHTML = ``;
 
     for (var key in songsData) {
 
