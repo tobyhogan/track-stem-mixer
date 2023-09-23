@@ -1,6 +1,28 @@
 
 function changeFunc() {
-    
+
+    //assuming sweep me off my feet
+
+
+    var selectBox = document.getElementById("song-select");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+
+    tag = document.getElementById("viewer-widget");
+
+    var audio1 = document.createElement("AUDIO");
+    audio1.setAttribute("src", "assets/pond-sweepme-bass.mp3");
+    audio1.setAttribute("controls", "controls");
+    audio1.classList.add("track");
+
+
+    tag.appendChild(audio1);
+  
+
+
+
+
+
 
 
 }
