@@ -8,7 +8,6 @@ const songsData = {
         "pond-sweepme-glock.mp3",
         "pond-sweepme-lead.mp3",
         "pond-sweepme-strings.mp3",
-        "sweep-me-off-my-feet-drums-v4.mp3"
     ],
     "cause-im-a-man":[
         "tame-cause-im-a-man_bells.mp3",
@@ -53,12 +52,18 @@ function updateSong() {
 
                 let elem = document.createElement("div", { is: "track-component"});
 
-                elem.setAttribute("class", "flex");
+                elem.setAttribute("class", "flex mb-2");
 
                 elem.innerHTML = `
 
 
-                <audio controls controlsList="nodownload noplaybackrate" src="${path}">
+                <div>
+
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                
+                </div>
+
+                <audio controls controlsList="nodownload noplaybackrate" src="${path}" class="track">
                 Your browser does not support the audio element.
                 </audio>
           

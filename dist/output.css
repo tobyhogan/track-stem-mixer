@@ -555,6 +555,11 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+
 .flex {
   display: flex;
 }
@@ -699,9 +704,7 @@ button {
   display: none;
 }
 
-.track {
-  margin: 5px 0 0 0;
-}
+
 
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
