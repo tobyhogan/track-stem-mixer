@@ -106,16 +106,32 @@ function updateSong() {
 
     }
 
+}
+
+
+function updateSpeed() {
+
+
+
+    var selectBox = document.getElementById("speed-select");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+    console.log(selectedValue);
+
+
+    const elements = document.querySelectorAll(".track");
+
+
+    for(let i = 0; i < elements.length; i++) {
+
+
+        elements[i].playbackRate = selectedValue;
+
+        console.log("worked");
+    
+    
+    }    
   
-
-    tag = document.getElementById("viewer-widget");
-
-
-
-
-
-
-
 
 }
 
