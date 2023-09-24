@@ -542,33 +542,36 @@ video {
   margin: 0px;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .ml-2 {
   margin-left: 0.5rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
-}
-
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .flex {
@@ -584,12 +587,8 @@ video {
   height: min-content;
 }
 
-.h-20 {
-  height: 5rem;
-}
-
-.h-10 {
-  height: 2.5rem;
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-2 {
@@ -600,29 +599,13 @@ video {
   width: 8rem;
 }
 
-.w-min {
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-3 {
-  width: 0.75rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-12 {
-  width: 3rem;
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .transform {
@@ -633,6 +616,10 @@ video {
   flex-direction: row;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -641,17 +628,16 @@ video {
   justify-content: space-evenly;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
 
 .border-transparent {
   border-color: transparent;
-}
-
-.bg-blue-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
 
 .bg-gray-500 {
@@ -682,6 +668,10 @@ video {
   line-height: 2.25rem;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -689,6 +679,10 @@ video {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.accent-gray-500 {
+  accent-color: #6b7280;
 }
 
 .outline-none {
@@ -701,13 +695,13 @@ video {
 }
 
 button {
-  padding: 0 5px;
-  margin: 0 5px 0 0;
+  padding: 5px 15px;
+  margin: 0 10px 0 0;
+  height: 35px;
   color: white;
   border: 1px solid white;
-  background-color: darkslategray;
+  background-color: #525864;
   border-radius: 5px;
-  width: 80px;
 }
 
 ::-webkit-media-controls-enclosure {
@@ -716,6 +710,10 @@ button {
 
 ::-webkit-media-controls-volume-control-container{
   display: none;
+}
+
+::-webkit-media-controls-mute-button {
+  display: none !important;
 }
 
 .focus\:outline-none:focus {

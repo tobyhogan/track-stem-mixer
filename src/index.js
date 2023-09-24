@@ -76,16 +76,16 @@ function updateSong() {
 
                 <div class="flex justify-evenly bg-white w-10 rounded-lg mr-2">
 
-                    <input type="checkbox" class="w-5" id="checkbox${count}" name="" value="" onclick="checkboxUpdated(track${count}, checkbox${count});" checked>
+                    <input type="checkbox" class="w-5 accent-gray-500" id="checkbox${count}" name="" value="" onclick="checkboxUpdated(track${count}, checkbox${count});" checked>
                 
                 </div>
 
-                <audio controls controlsList="nodownload noplaybackrate" src="${path}" class="track" id="track${count}">
-                Your browser does not support the audio element.
+                <audio controls controlsList="nodownload noplaybackrate " src="${path}" class="track" id="track${count}">
+                    Your browser does not support the audio element.
                 </audio>
           
-                <div class="flex audio-controls w-32 h-15 bg-white rounded-lg ml-2">
-                    <input id="volume-knob" type="range" value="100" class="input-knob volume-knob" outline-none focus:outline-none outline-transparent border-transparent focus:ring-0 min="0" max="100" data-diameter="40" data-fgcolor="#404040" data-bgcolor="#9da4b0"/>
+                <div class="flex audio-controls w-32 h-15 bg-white rounded-lg items-center ml-2">
+                    <input id="volume-knob" type="range" value="100" class="input-knob volume-knob ml-1" outline-none focus:outline-none outline-transparent border-transparent focus:ring-0 min="0" max="100" data-diameter="40" data-fgcolor="#BBC3D0" data-bgcolor="#7B8393"/>
                 </div>
           
           

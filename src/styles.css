@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
 button {
-    padding: 0 5px;
-    margin: 0 5px 0 0;
+    padding: 5px 15px;
+    margin: 0 10px 0 0;
+
+    height: 35px;
 
     color: white;
     border: 1px solid white;
-    background-color: darkslategray;
+    background-color: #525864;
     border-radius: 5px;
-    width: 80px;
 
 
 
@@ -22,4 +24,8 @@ button {
 
 ::-webkit-media-controls-volume-control-container{
     display: none;
+}
+
+::-webkit-media-controls-mute-button {
+    display: none !important;
 }
