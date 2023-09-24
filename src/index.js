@@ -19,15 +19,31 @@ const songsData = {
 }
 
 
+function checkboxUpdated(track, checkbox) {
+
+    if (checkbox.checked == false) {
+
+        track.volume = 0;
+
+    } else {
+        track.volume = 1;
+    }
+
+
+
+    
+
+
+
+}
+
+
+
 
 
 
 
 function updateSong() {
-
-
-
-
 
 
 
@@ -58,13 +74,13 @@ function updateSong() {
                 elem.innerHTML = `
 
 
-                <div>
+                <div class="flex justify-evenly bg-white w-10 rounded-lg mr-2">
 
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <input type="checkbox" class="w-5" id="checkbox${count}" name="" value="" onclick="checkboxUpdated(track${count}, checkbox${count});" checked>
                 
                 </div>
 
-                <audio controls controlsList="nodownload noplaybackrate" src="${path}" class="track">
+                <audio controls controlsList="nodownload noplaybackrate" src="${path}" class="track" id="track${count}">
                 Your browser does not support the audio element.
                 </audio>
           
@@ -102,6 +118,12 @@ function updateSong() {
 
 
 }
+
+
+
+
+
+
 
 function playAllAudio() {
 
@@ -163,3 +185,4 @@ console.log(slider.value)
 
 */
 
+updateSong();

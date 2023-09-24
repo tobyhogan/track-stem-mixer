@@ -30,14 +30,11 @@
 
             </div>
 
-            <div class="dropdown"></div>
-
-
             <form action="">
                 <label for="song" class="text-white">Song:</label>
                 <select name="song" id="song-select" onchange="updateSong();">
-                  <option value="none">None</option>
                   <option value="sweep-me-off-my-feet">Sweep Me Off My Feet</option>
+                  <option value="none">None</option>
                   <option value="cause-im-a-man">Cause I'm a Man</option>
                 </select>
                 <br><br>
@@ -50,5 +47,8 @@
         </div>
         
     </body>
+    <script>
+        updateSong();
+    </script>
 
 </html>
