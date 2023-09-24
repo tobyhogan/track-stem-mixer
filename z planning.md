@@ -2,12 +2,16 @@ Todo
 
 (rn: )
 
+change track speed
+
 
 
 (ltr: )
 
 - be able to toggle off/on specific tracks
 - be able to solo select tracks
+
+add crunch
 
 Done
 
