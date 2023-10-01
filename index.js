@@ -63,7 +63,7 @@ function updateSong() {
             for (var count in songsData[key]) {
 
 
-                path = "assets/songs/" + selectedValue + "/" + songsData[key][count]
+                path = "src/assets/songs/" + selectedValue + "/" + songsData[key][count]
 
 
 
