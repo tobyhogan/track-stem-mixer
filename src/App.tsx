@@ -20,7 +20,12 @@ function App() {
           </select>
           <h2 className='ml-7 mt-3'>Components:</h2>
           <div className='bg-grayNew-150 mx-10 mt-3'>
-            <div className='py-3 m'>Component1</div>
+            <div className='py-3 m'>Component1
+
+            <audio controls>
+              <source src="tame-cause-im-a-man_bells.mp3" type='audio/mp3'/>
+            </audio>
+            </div>
             <div className='py-3'>Component2</div>
             <div className='py-3'>Component3</div>
           </div>
