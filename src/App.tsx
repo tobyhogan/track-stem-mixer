@@ -23,7 +23,7 @@ function App() {
             <div className='py-3 m'>Component1
 
             <audio controls>
-              <source src="tame-cause-im-a-man_bells.mp3" type='audio/mp3'/>
+              <source src="/src/songs/tame-cause-im-a-man_bells.mp3" type='audio/mp3'/>
             </audio>
             </div>
             <div className='py-3'>Component2</div>
